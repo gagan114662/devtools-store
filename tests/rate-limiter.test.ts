@@ -232,7 +232,10 @@ describe('RateLimitedWebSocketServer', () => {
       await server.handleMessage(client, 'not json');
 
       const response = JSON.parse(client.messages[0]);
-      expect(response.code).toBe('INVALID_MESSAGE');
+      expect(response.code).toBe('INVALID_JSON');
+      expect(response.title).toBe('Invalid JSON');
+      expect(response.statusCode).toBe(400);
+      expect(response.recoverable).toBe(true);
     });
 
     it('should handle messages without type', async () => {
@@ -240,7 +243,9 @@ describe('RateLimitedWebSocketServer', () => {
       await server.handleMessage(client, JSON.stringify({ payload: 'test' }));
 
       const response = JSON.parse(client.messages[0]);
-      expect(response.code).toBe('INVALID_MESSAGE');
+      expect(response.code).toBe('MISSING_TYPE');
+      expect(response.title).toBe('Missing Message Type');
+      expect(response.suggestion).toBeTruthy();
     });
   });
 

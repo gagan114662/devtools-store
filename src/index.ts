@@ -19,3 +19,19 @@ export {
   RateLimitedHandlerConfig,
   MessageHandler,
 } from './websocket-handler';
+
+export {
+  ErrorCodes,
+  ErrorDefinitions,
+  CloseCode,
+  createErrorResponse,
+  createErrorString,
+  getErrorDefinition,
+  isRecoverable,
+  formatErrorForLogging,
+  type ErrorCode,
+  type ErrorDefinition,
+  type ErrorResponse,
+  type CreateErrorOptions,
+  type CloseCodeType,
+} from './errors';

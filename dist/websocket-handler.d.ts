@@ -4,6 +4,7 @@
  * Wraps WebSocket message handling with rate limiting protection.
  */
 import { RateLimiter, RateLimiterConfig, RateLimitResult, RateLimitPresets } from './rate-limiter';
+import { ErrorCodes, CloseCode, type ErrorCode } from './errors';
 export interface WebSocketClient {
     id: string;
     send(data: string): void;
@@ -22,6 +23,8 @@ export interface RateLimitedHandlerConfig {
     closeOnRateLimit?: boolean;
     /** Custom client ID extractor (default: uses client.id) */
     getClientId?: (client: WebSocketClient) => string;
+    /** Include suggestions in error responses (default: true) */
+    includeSuggestions?: boolean;
 }
 export type MessageHandler = (client: WebSocketClient, message: WebSocketMessage) => void | Promise<void>;
 /**
@@ -66,3 +69,4 @@ export declare class RateLimitedWebSocketServer {
     destroy(): void;
 }
 export { RateLimiter, RateLimiterConfig, RateLimitResult, RateLimitPresets };
+export { ErrorCodes, CloseCode, type ErrorCode };
