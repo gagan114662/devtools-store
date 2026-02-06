@@ -87,14 +87,16 @@ Based on speed-to-revenue and feasibility:
 - **Files:** `products/websocket-rate-limiter/`, `docs/rate-limiter.html`
 - **Notes:** Live landing page with PayPal checkout. 45+ tests, TypeScript, Redis support.
 
-### Strategy #3: [Next Up]
+### Strategy #3: Rapid Code Review Service
 - **Type:** Micro-Consulting / Code Review Service
-- **Platform:** Fiverr or Upwork
-- **Launched:** -
-- **Status:** 🟡 Needs Account Setup
+- **Platform:** GitHub Pages + PayPal (listing prep for Fiverr/Upwork)
+- **Price:** $49 (60 min)
+- **Status:** 🟢 LIVE (direct via PayPal)
+- **Landing Page:** https://gagan114662.github.io/devtools-store/code-review.html
+- **Launched:** 2025-02-06
 - **Investment:** $0
 - **Revenue:** $0
-- **Notes:** AI-assisted code review. Fast turnaround. High margins.
+- **Notes:** Live direct-pay landing page. Fiverr/Upwork listing still needs account setup/owner approval.
 
 ---
 
