@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Rate Limiter - Production-Ready TypeScript | $19</title>
+    <meta name="description" content="Battle-tested WebSocket rate limiting for Node.js. Token bucket, sliding window, Redis support. 45+ tests.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 2.8em; margin-bottom: 20px; }
+        .hero .subtitle { font-size: 1.3em; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; }
+        .price-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        h2 { font-size: 1.8em; margin-bottom: 20px; color: #1a1a2e; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .feature {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .feature h3 { color: #f5576c; margin-bottom: 10px; }
+        .code-box {
+            background: #1a1a2e;
+            color: #e0e0e0;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+        }
+        .code-box .comment { color: #6a9955; }
+        .code-box .keyword { color: #569cd6; }
+        .code-box .string { color: #ce9178; }
+        .cta-section {
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin: 40px 0;
+        }
+        .paypal-btn {
+            display: inline-block;
+            background: #0070ba;
+            color: white;
+            padding: 18px 50px;
+            border-radius: 30px;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        .paypal-btn:hover { background: #005ea6; transform: scale(1.05); }
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .trust-badge { text-align: center; opacity: 0.7; }
+        .trust-badge span { font-size: 2em; display: block; }
+        .back-link { display: inline-block; margin: 20px 0; color: #fff; text-decoration: none; opacity: 0.8; }
+        .guarantee {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .tech-specs {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        .tech-specs ul { list-style: none; }
+        .tech-specs li { padding: 10px 0; border-bottom: 1px solid #eee; }
+        .tech-specs li:before { content: "✓ "; color: #4caf50; font-weight: bold; }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .comparison > div { background: white; padding: 25px; border-radius: 12px; }
+        .comparison h4 { margin-bottom: 15px; }
+        .comparison .diy { border-top: 4px solid #f44336; }
+        .comparison .product { border-top: 4px solid #4caf50; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <a href="index.html" class="back-link">← Back to all products</a>
+        <h1>⚡ WebSocket Rate Limiter</h1>
+        <p class="subtitle">Production-ready rate limiting for Node.js WebSocket servers. Stop abuse, protect your infrastructure.</p>
+        <div class="price-tag">$19</div>
+        <p style="opacity: 0.8;">One-time purchase • Full source code • MIT license</p>
+    </div>
+
+    <div class="container">
+        <h2>Why You Need This</h2>
+        <div class="comparison">
+            <div class="diy">
+                <h4>❌ Building It Yourself</h4>
+                <ul style="font-size: 0.95em; color: #666;">
+                    <li>4-8 hours of development</li>
+                    <li>Edge cases you'll discover in production</li>
+                    <li>No tests until something breaks</li>
+                    <li>Memory leaks from improper cleanup</li>
+                    <li>Scaling issues with naive approaches</li>
+                </ul>
+            </div>
+            <div class="product">
+                <h4>✅ This Package</h4>
+                <ul style="font-size: 0.95em; color: #666;">
+                    <li>Copy, paste, done in 5 minutes</li>
+                    <li>45+ tests covering edge cases</li>
+                    <li>Memory-efficient token bucket</li>
+                    <li>Redis adapter for horizontal scaling</li>
+                    <li>Production-hardened code</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Features</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>🪣 Token Bucket</h3>
+                <p>Smooth rate limiting with burst allowance. Perfect for APIs and real-time apps.</p>
+            </div>
+            <div class="feature">
+                <h3>📊 Sliding Window</h3>
+                <p>Precise request counting over time windows. No boundary spikes.</p>
+            </div>
+            <div class="feature">
+                <h3>🔗 Per-Connection Limits</h3>
+                <p>Rate limit individual connections independently. Fair usage for all.</p>
+            </div>
+            <div class="feature">
+                <h3>🌐 Global Limits</h3>
+                <p>Protect your server from coordinated attacks with global rate limits.</p>
+            </div>
+            <div class="feature">
+                <h3>📦 Redis Support</h3>
+                <p>Scale horizontally with the included Redis adapter. Cluster-ready.</p>
+            </div>
+            <div class="feature">
+                <h3>📝 Full TypeScript</h3>
+                <p>Complete type definitions. IntelliSense support out of the box.</p>
+            </div>
+        </div>
+
+        <h2>Quick Start</h2>
+        <div class="code-box">
+<span class="keyword">import</span> { RateLimiter } <span class="keyword">from</span> <span class="string">'./rate-limiter'</span>;<br><br>
+<span class="comment">// Create limiter: 100 requests per minute</span><br>
+<span class="keyword">const</span> limiter = <span class="keyword">new</span> RateLimiter({<br>
+&nbsp;&nbsp;maxRequests: <span class="string">100</span>,<br>
+&nbsp;&nbsp;windowMs: <span class="string">60000</span>,<br>
+&nbsp;&nbsp;strategy: <span class="string">'sliding-window'</span><br>
+});<br><br>
+<span class="comment">// In your WebSocket handler</span><br>
+ws.on(<span class="string">'message'</span>, (msg) => {<br>
+&nbsp;&nbsp;<span class="keyword">if</span> (!limiter.check(connectionId)) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ws.send(<span class="string">'Rate limited. Try again later.'</span>);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span>;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="comment">// Process message...</span><br>
+});
+        </div>
+
+        <div class="tech-specs">
+            <h2>What's Included</h2>
+            <ul>
+                <li>Full TypeScript source code</li>
+                <li>45+ comprehensive unit tests</li>
+                <li>Token bucket implementation</li>
+                <li>Sliding window implementation</li>
+                <li>In-memory store adapter</li>
+                <li>Redis store adapter</li>
+                <li>Complete API documentation</li>
+                <li>Usage examples and recipes</li>
+                <li>MIT license for commercial use</li>
+            </ul>
+        </div>
+
+        <div class="guarantee">
+            <strong>💯 30-Day Money-Back Guarantee</strong><br>
+            If this doesn't save you hours of development time, get a full refund. No questions asked.
+        </div>
+
+        <div class="cta-section">
+            <h2>Get Instant Access</h2>
+            <p>Download the complete package immediately after payment</p>
+            
+            <!-- PayPal Buy Button -->
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=vandan%40getfoolish.com&item_name=WebSocket+Rate+Limiter+-+TypeScript+Package&amount=19.00&currency_code=USD&button_subtype=services&no_note=0&tax=0&shipping=0&rm=1&return=https%3A%2F%2Fyour-site.github.io%2Fthanks.html&cancel_return=https%3A%2F%2Fyour-site.github.io%2Frate-limiter.html" class="paypal-btn">
+                Buy Now - $19 with PayPal
+            </a>
+            
+            <p style="margin-top: 20px; color: #666; font-size: 0.9em;">
+                Or send $19 via PayPal to: <strong>vandan@getfoolish.com</strong><br>
+                Include your email in the note for instant delivery
+            </p>
+
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span>🔒</span>
+                    Secure Payment
+                </div>
+                <div class="trust-badge">
+                    <span>⚡</span>
+                    Instant Delivery
+                </div>
+                <div class="trust-badge">
+                    <span>💯</span>
+                    30-Day Guarantee
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

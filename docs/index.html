@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Tools & Resources | Premium Digital Products</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; color: white; padding: 60px 0; }
+        header h1 { font-size: 2.8em; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        header p { font-size: 1.3em; opacity: 0.95; max-width: 600px; margin: 0 auto; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover { transform: translateY(-5px); }
+        .product-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 30px;
+        }
+        .product-header h2 { font-size: 1.6em; margin-bottom: 10px; }
+        .product-header .price {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+        .product-header .price span { font-size: 0.5em; color: #aaa; }
+        .product-body { padding: 30px; }
+        .product-body ul { list-style: none; margin-bottom: 25px; }
+        .product-body li { padding: 8px 0; border-bottom: 1px solid #eee; }
+        .product-body li:before { content: "✓ "; color: #00d4ff; font-weight: bold; }
+        .buy-btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .buy-btn:hover { transform: scale(1.02); box-shadow: 0 10px 30px rgba(0,212,255,0.3); }
+        .badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #333;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            color: white;
+            padding: 40px;
+            opacity: 0.8;
+        }
+        .guarantee {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            color: white;
+        }
+        .guarantee h3 { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛠️ Developer Power Tools</h1>
+            <p>Premium resources to supercharge your development workflow. Instant delivery via email.</p>
+        </header>
+
+        <div class="products">
+            <!-- Product 1: Prompt Pack -->
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="badge">BEST SELLER</span>
+                    <h2>🚀 Developer Prompt Pack</h2>
+                    <div class="price">$12 <span>one-time</span></div>
+                </div>
+                <div class="product-body">
+                    <ul>
+                        <li>55 battle-tested AI prompts</li>
+                        <li>Works with ChatGPT, Claude & Copilot</li>
+                        <li>Code generation templates</li>
+                        <li>Debugging & review prompts</li>
+                        <li>Documentation generators</li>
+                        <li>Architecture design helpers</li>
+                        <li>Testing & refactoring prompts</li>
+                        <li>Instant download (PDF + Markdown)</li>
+                    </ul>
+                    <a href="prompt-pack.html" class="buy-btn">Get Prompt Pack - $12</a>
+                </div>
+            </div>
+
+            <!-- Product 2: WebSocket Rate Limiter -->
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="badge">DEVELOPER TOOL</span>
+                    <h2>⚡ WebSocket Rate Limiter</h2>
+                    <div class="price">$19 <span>one-time</span></div>
+                </div>
+                <div class="product-body">
+                    <ul>
+                        <li>Production-ready TypeScript code</li>
+                        <li>Battle-tested with 45+ unit tests</li>
+                        <li>Token bucket & sliding window</li>
+                        <li>Per-connection & global limits</li>
+                        <li>Redis adapter included</li>
+                        <li>Full documentation</li>
+                        <li>MIT licensed for commercial use</li>
+                        <li>Free updates for life</li>
+                    </ul>
+                    <a href="rate-limiter.html" class="buy-btn">Get Rate Limiter - $19</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="guarantee">
+            <h3>💯 100% Satisfaction Guarantee</h3>
+            <p>Not happy? Email us within 30 days for a full refund. No questions asked.</p>
+        </div>
+
+        <footer>
+            <p>Secure payments via PayPal • Instant digital delivery • Questions? Contact support</p>
+        </footer>
+    </div>
+</body>
+</html>
